@@ -22,13 +22,11 @@ public class Consult {
 
     @Override
     public String toString() {
-        DecimalFormat decimalFormat = new DecimalFormat("#.###");
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
         if (result.equals("success")) {
             return "Result: " + result + "\n" +
-                    "Code base: " + codeBase + "\n" +
-                    "Code target: " + codeTarget + "\n" +
-                    "Value to convert: " + decimalFormat.format(valueBase) + "\n" +
-                    "Value converted " + decimalFormat.format(valueTarget) + "\n" +
+                    "Value to convert: " + decimalFormat.format(valueBase) + codeBase + "\n" +
+                    "Value converted " + decimalFormat.format(valueTarget) + codeTarget + "\n" +
                     "Consult date: " + consultDateTime + "\n";
         }else {
             return "Result: " + result + "\n" +

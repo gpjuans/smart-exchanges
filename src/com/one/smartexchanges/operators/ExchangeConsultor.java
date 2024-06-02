@@ -9,9 +9,9 @@ import com.one.smartexchanges.models.Exchange;
 
 public class ExchangeConsultor {
 
-    public Exchange exchangeCurrency(double valueToConvert, String baseCurrency, String targetCurrency){
+    public Exchange exchangeCurrency(double valueBase, String baseCurrency, String targetCurrency){
         URI link = URI.create("https://v6.exchangerate-api.com/v6/75ed6e11e44dd0455fbf92b1/pair/" +
-                baseCurrency + "/" + targetCurrency + "/" + valueToConvert);
+                baseCurrency + "/" + targetCurrency + "/" + valueBase);
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(link)

@@ -25,4 +25,8 @@ public class User {
     public List<Consult> getConsultHistory(){
         return consultHistory;
     }
+
+    public void addConsult(Consult consult){
+        consultHistory.add(consult);
+    }
 }
